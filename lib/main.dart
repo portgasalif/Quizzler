@@ -12,7 +12,12 @@ class Quizzler extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
       home: Scaffold(
+        appBar: AppBar(
+          title: Center(child: Text('Quizzler')),
+          backgroundColor: Colors.black12,
+        ),
         backgroundColor: Colors.grey.shade900,
         body: SafeArea(
           child: Padding(
@@ -40,7 +45,7 @@ class _QuizPageState extends State<QuizPage> {
       if (quizBrain.isFinished() == true) {
         Alert(
           context: context,
-          title: 'Ujian Telah selesai!',
+          title: 'Ujian Telah Selesai',
           desc: 'Kamu hebat sekali !!',
         ).show();
 
